@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<br><br><br>
+
+<h3><center><img class="navimage" src="{% static 'images/shatkon.jpg' %}" alt="">श्री जनकल्याण माध्यमिक विघ्यालय<img class="navimage" src="{% static 'images/shatkon.jpg' %}" alt=""></center></h3>
+<hr><hr>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 offset-4">
+      <table class="table table-dark table-striped">
+          <thead>
+              <tr>
+                  <th><center>Subjects Availabae Here At 11th And 12th</center></th>
+              </tr>
+          </thead>
+          <tbody>
+              {% for s in sub %}
+                  <tr>
+                      <td><center>{{s.subject}}</center></td>
+                  </tr>
+              {% endfor %}
+          </tbody>
+      </table>
+    <h4>for any query please click below</h4><br>
+    <button type="button" class="btn btn-success">Click me</button>
+  </div>
+</div>
+</div>
+{% endblock %}

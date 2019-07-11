@@ -1,0 +1,36 @@
+body{
+  padding-top: 50px;
+}
+well, h1,h2,h3,h4{
+  color: #27c246;
+  font-family: 'Oranienbaum', serif;
+}
+p{
+  font-family: 'Oranienbaum', serif;
+}
+
+.divspace{
+  padding-top: 20px;
+  passing-button:20px;
+}
+
+.navimage{
+  height: 40px;
+  width: auto;
+}
+
+.wellfooter{
+  background-color: #27c246;
+  color: #fff;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.fa-stack{
+  color: #ff3300;
+}
+
+
+.navbg{
+  background-color: #ff3300;
+}

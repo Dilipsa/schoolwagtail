@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<br><br>
+<h3 class="divspace"><center><img class="navimage" src="{% static 'images/shatkon.jpg' %}" alt="">श्री जनकल्याण माध्यमिक विघ्यालय<img class="navimage" src="{% static 'images/shatkon.jpg' %}" alt=""></center></h3>
+<hr><hr>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 offset-3">
+      <img src="{% static 'images/phone.jpg' %}" alt="">
+    </div>
+  </div>
+</div>
+<div class="divspace">
+</div>
+
+<!-- contact details starts here  -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <h4>Shree Janakalyan Secondary School</h4>
+      <h4>Kaligandagi Gaupalika, ward no 5, Gulmi Nepal</h4>
+      <ul class="unstyled">
+        <li><h4>phone: +918892571579</h4></li>
+        <li><h4>phone: +918892356079</h4></li>
+      </ul>
+    </div>
+    <div class="col-md-4">
+      <h4>Be Connected Through Social</h4>
+      <ul class="list-inline">
+               <a class="forms" target="_blank" href="https://www.facebook.com"><span class="fa-stack fa-lg">
+                   <i class="fa fa-circle fa-stack-2x"></i>
+                   <i class="fa fa-facebook fa-stack-1x fa-inverse"></i></span>
+               </a>
+               <a class="forms" target="_blank" href="#"><span class="fa-stack fa-lg">
+                   <i class="fa fa-circle fa-stack-2x"></i>
+                   <i class="fa fa-twitter fa-stack-1x fa-inverse"></i></span>
+               </a>
+               <a class="forms" target="_blank" href="#"><span class="fa-stack fa-lg">
+                   <i class="fa fa-circle fa-stack-2x"></i>
+                   <i class="fa fa-google fa-stack-1x fa-inverse"></i></span>
+               </a>
+               <a class="forms" class="forms" target="_blank" href="#"><span class="fa-stack fa-lg">
+                   <i class="fa fa-circle fa-stack-2x"></i>
+                   <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i></span>
+               </a>
+               <a class="forms" target="_blank" href="https://github.com/Dilipsa/"><span class="fa-stack fa-lg">
+                   <i class="fa fa-circle fa-stack-2x"></i>
+                   <i class="fa fa-github fa-stack-1x fa-inverse"></i></span>
+               </a>
+             </ul>
+    </div>
+  </div>
+</div>
+<div class="divspace">
+</div>
+<!-- form starts here-->
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-3">
+      <h3>Enquiry Form</h3>
+      <form>
+  <div class="form-row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="First name">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Last name">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Phone">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Email">
+    </div>
+  </div>
+  <button type="button" class="btn btn-success">Submit</button>
+</form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

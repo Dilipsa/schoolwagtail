@@ -1,0 +1,133 @@
+{% load static wagtailuserbar %}
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>
+            {% block title %}
+                {% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}
+            {% endblock %}
+            {% block title_suffix %}
+                {% with self.get_site.site_name as site_name %}
+                    {% if site_name %}- {{ site_name }}{% endif %}
+                {% endwith %}
+            {% endblock %}
+        </title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {# Global stylesheets #}
+
+        <link rel="stylesheet" href="https://bootswatch.com/4/superhero/bootstrap.min.css" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/website.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
+
+        {% block extra_css %}
+            {# Override this in templates to add extra stylesheets #}
+        {% endblock %}
+    </head>
+
+    <body class="{% block body_class %}{% endblock %}">
+        {% wagtailuserbar %}
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary navbar fixed-top">
+  <a class="navbar-brand" href="\">श्री जनकल्याण माध्यमिक विघ्यालय</a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="\">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="\course">Courses</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="\about">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="\contact">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="\notification">Notifications</a>
+      </li>
+    </ul>
+
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+        {% block content %}{% endblock %}
+        <!-- footer starts -->
+
+        <hr><hr>
+        <div class="well wellfooter">
+        <div class="row">
+          <div class="col-md-3 offset-1">
+            <h3 style="color:black">connect us on</h3>
+            <ul class="list-inline">
+                     <a class="forms" target="_blank" href="https://www.facebook.com"><span class="fa-stack fa-lg">
+                         <i class="fa fa-circle fa-stack-2x"></i>
+                         <i class="fa fa-facebook fa-stack-1x fa-inverse"></i></span>
+                     </a>
+                     <a class="forms" target="_blank" href="#"><span class="fa-stack fa-lg">
+                         <i class="fa fa-circle fa-stack-2x"></i>
+                         <i class="fa fa-twitter fa-stack-1x fa-inverse"></i></span>
+                     </a>
+                     <a class="forms" target="_blank" href="#"><span class="fa-stack fa-lg">
+                         <i class="fa fa-circle fa-stack-2x"></i>
+                         <i class="fa fa-google fa-stack-1x fa-inverse"></i></span>
+                     </a>
+                     <a class="forms" class="forms" target="_blank" href="#"><span class="fa-stack fa-lg">
+                         <i class="fa fa-circle fa-stack-2x"></i>
+                         <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i></span>
+                     </a>
+                     <a class="forms" target="_blank" href="https://github.com/Dilipsa/"><span class="fa-stack fa-lg">
+                         <i class="fa fa-circle fa-stack-2x"></i>
+                         <i class="fa fa-github fa-stack-1x fa-inverse"></i></span>
+                     </a>
+                   </ul>
+                   श्री जनकल्याण माध्यमिक विघ्यालय  <br>
+                   कालिगण्डकी गाउँपालिका वार्ड नम्बर ५,फोक्सिंग,गुल्मी,नेपाल ।
+          </div>
+          <div class="col-md-3 offset-1">
+                     <h3 style="color:black">Admission</h3>
+                    The admission process for the academic year 2019-20 has begun. For more information, please register using the link below:<br>
+                    <button type="button" class="btn btn-dark">click me</button>
+                    </ul>
+                   </div>
+                   <div class="col-md-3 offset-1">
+                    <h3 style="color:black">Subjects in +2</h3>
+                    <ul class="list-unstyled">
+                      <li>Management</li>
+                      <li>Nepali</li>
+                      <li>English</li>
+                      <li>Health</li>
+                      <li>Socialogy</li>
+                    </ul>
+
+                </div>
+        </div>
+        <p><center>Developed and maintained by Dilip Sapkota
+        <a class="forms" target="_blank" href="https://www.facebook.com"><img class="navimage" src="{% static 'images/me.jpg' %}" alt="">
+        </a></center></p>
+
+      </div>
+
+
+        <!-- footer ends -->
+        {# Global javascript #}
+        <script type="text/javascript" src="{% static 'js/website.js' %}"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        {% block extra_js %}
+            {# Override this in templates to add extra javascript #}
+        {% endblock %}
+    </body>
+</html>
